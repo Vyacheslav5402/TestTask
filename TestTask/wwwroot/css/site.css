@@ -150,3 +150,24 @@ header {
 .dropdownHover:hover .dropHoverbtn {
     background-color: #3e8e41;
 }
+
+
+
+a:nth-child(2n+1) {
+    color: blue;
+}
+.text-blue{
+    color:blue;
+}
+.rectangle {
+    background-color: yellow;
+    position: fixed;
+    right: 5px;
+    top: 50%;
+    width: 40px;
+    height: 160px;
+    display: block;
+    z-index: 99999999;
+
+}
+

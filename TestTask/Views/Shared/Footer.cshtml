@@ -1,3 +1,38 @@
-﻿<footer class="border-top footer text-muted">
-<div class="container"></div>
-</footer>
+﻿@model TestTask.Models.EmailModel
+<div class="container">
+    <footer class="border-top footer text-muted">
+        <div>
+
+            <div class="row">
+                <div class="col-sm py-3 py-md-3 px-3">
+                    <h4>Enter your email</h4>
+                    <form asp-controller="home" asp-action="AddPost" method="post" role="model">
+                        @Html.EditorForModel(Model)
+                        <input type="submit" value="Add" />
+                    </form>
+                </div>
+                <div class="col-sm py-3 py-md-3 px-3">
+                    <hr align="left" width="100%" size="4" color="#ff9900" />
+                    <p>Link 1</p>
+                    <p>Link 2</p>
+                    <p>Link 3</p>
+                </div>
+                <div class="col-sm py-3 py-md-3 px-3">
+                    <hr align="left" width="100%" size="4" color="#ff9900" />
+                    <p>Link 1</p>
+                    <p>Link 2</p>
+                    <p>Link 3</p>
+                </div>
+                <div class="col-sm py-3 py-md-3 px-3">
+                    <hr align="left" width="100%" size="4" color="#ff9900" />
+                    <p>Link 1</p>
+                    <p>Link 2</p>
+                    <p>Link 3</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</div>
+

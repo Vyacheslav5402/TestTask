@@ -6,6 +6,7 @@ namespace TestTask.Controllers
 {
     public class HomeController : Controller
     {
+        public static List<EmailModel> emails = new List<EmailModel>();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -13,9 +14,27 @@ namespace TestTask.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(EmailModel model)
         {
+
             return View();
+        }
+
+        public IActionResult AddPost(EmailModel model)
+        {
+            try
+            {
+                EmailModel email = new EmailModel
+                {
+                    Email = model.Email
+                };
+                emails.Add(email);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return Index(model);
+            }
         }
 
         public IActionResult Privacy()
@@ -28,5 +47,6 @@ namespace TestTask.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
