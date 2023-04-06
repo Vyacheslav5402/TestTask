@@ -16,7 +16,6 @@ namespace TestTask.Controllers
 
         public IActionResult Index(EmailModel model)
         {
-
             return View();
         }
 
@@ -26,7 +25,8 @@ namespace TestTask.Controllers
             {
                 EmailModel email = new EmailModel
                 {
-                    Email = model.Email
+                    Email = model.Email,
+                    Date = DateTime.Now
                 };
                 emails.Add(email);
                 return RedirectToAction(nameof(Index));

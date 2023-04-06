@@ -24,6 +24,7 @@ body {
     position: sticky;
     top: 0;
     background: white;
+    min-width: 100%;
 }
 
 header {
@@ -46,6 +47,10 @@ header {
     display: flex;
     grid-gap: 40px;
 }
+
+    header > div:nth-child(1) {
+        margin-left: 10%;
+    }
 
     header > div:nth-child(4) {
         margin-left: auto;
@@ -102,8 +107,7 @@ header {
 }
 
 
-
-/* Dropdown Button */
+/* Dropdown HOVER Button */
 .dropHoverbtn {
     background-color: #4CAF50;
     color: white;
@@ -156,18 +160,31 @@ header {
 a:nth-child(2n+1) {
     color: blue;
 }
-.text-blue{
-    color:blue;
+
+.text-blue {
+    color: blue;
 }
-.rectangle {
+
+button.new {
     background-color: yellow;
-    position: fixed;
-    right: 5px;
-    top: 50%;
-    width: 40px;
-    height: 160px;
-    display: block;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     z-index: 99999999;
-
+    display: block;
+    position: fixed;
+    right: -20px;
+    top: 50%;
 }
 
+button.headers {
+    background-color: orangered;
+    color: white;
+    width: 86px;
+    height: 34px;
+    border: none;
+}
